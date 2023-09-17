@@ -3,7 +3,7 @@ import gestion.*;
 import java.util.List;
 
 public class Anfibio extends Animal {
-	private static List<Anfibio> listado;
+	private static List<Anfibio> listado = new java.util.ArrayList<Anfibio>();
 	public static int ranas;
 	public static int salamandras;
 	private String colorPiel;
