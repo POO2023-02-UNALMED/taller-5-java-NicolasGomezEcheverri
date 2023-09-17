@@ -1,6 +1,7 @@
 package zooAnimales;
 import gestion.*;
 import java.util.List;
+import java.util.ArrayList;
 
 public class Animal {
 	private static int totalAnimales;
@@ -8,18 +9,17 @@ public class Animal {
 	private int edad;
 	private String habitat;
 	private String genero;
-	private List<Zona> zona;
+	private Zona zona;
 	
 	public Animal() {
 		totalAnimales++;
 	}
 	
-	public Animal(String nombre, int edad, String habitat, String genero, List<Zona> zona) {
+	public Animal(String nombre, int edad, String habitat, String genero) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.habitat = habitat;
 		this.genero = genero;
-		this.zona = zona;
 		totalAnimales++;
 	}
 
@@ -59,7 +59,7 @@ public class Animal {
 		this.genero = genero;
 	}
 
-	public List<Zona> getZona(){
+	public Zona getZona(){
 		return zona;
 	}
 
@@ -73,7 +73,7 @@ public class Animal {
 
 	public String toString() {
         if (zona != null && zona.size() > 0) {
-            return "Mi nombre es " + nombre + ", tengo una edad de " + edad + ", habito en " + habitat + " y mi genero es " + genero + ", la zona en la que me ubico es " + zona.get(0).getNombre() + ", en el " + zona.get(0).getZoo().get(0).getNombre();
+            return "Mi nombre es " + nombre + ", tengo una edad de " + edad + ", habito en " + habitat + " y mi genero es " + genero + ", la zona en la que me ubico es " + zona.getNombre() + ", en el " + zona.getZoo().getNombre();
         } else {
             return "Mi nombre es " + nombre + ", tengo una edad de " + edad + ", habito en " + habitat + " y mi genero es " + genero;
         }

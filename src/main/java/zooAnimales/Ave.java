@@ -1,6 +1,7 @@
 package zooAnimales;
 import gestion.*;
 import java.util.List;
+import java.util.ArrayList;
 
 public class Ave extends Animal{
 	private static List<Ave> listado = new java.util.ArrayList<Ave>();
@@ -13,8 +14,8 @@ public class Ave extends Animal{
 		listado.add(this);
 	}
 
-	public Ave(String nombre, int edad, String habitat, String genero, List<Zona> zona, String colorPlumas){
-		super(nombre, edad, habitat, genero, zona);
+	public Ave(String nombre, int edad, String habitat, String genero, String colorPlumas){
+		super(nombre, edad, habitat, genero);
 		this.colorPlumas = colorPlumas;
 		listado.add(this);
 	}
@@ -49,13 +50,13 @@ public class Ave extends Animal{
 	}
 
 	public static Ave crearHalcon(String nombre, int edad, String genero){
-		Ave halcon = new Ave(nombre, edad, "montanas", genero, null, "cafe glorioso");
+		Ave halcon = new Ave(nombre, edad, "montanas", genero, "cafe glorioso");
 		halcones++;
 		return halcon;
 	}
 
 	public static Ave crearAguila(String nombre, int edad, String genero){
-		Ave aguila = new Ave(nombre, edad, "montanas", genero, null, "blanco y amarillo");
+		Ave aguila = new Ave(nombre, edad, "montanas", genero, "blanco y amarillo");
 		aguilas++;
 		return aguila;
 	}
