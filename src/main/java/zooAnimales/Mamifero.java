@@ -37,7 +37,7 @@ public class Mamifero extends Animal{
 		return leones;
 	}
 
-	public boolean getPelaje() {
+	public boolean isPelaje() {
 		return pelaje;
 	}
 
